@@ -110,9 +110,29 @@ public class KataTest {
 
     }
 
+    @Test
+    public void arrayMinimumNumberCanBeCalculated(){
+         // Kata kata = new Kata();
+        int [] numbers ={1,2,3,4,5};
+        int result = Kata.calMinimumOf(numbers);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void arrayMaximumNumberCanBeCalculated(){
+
+            int [] numbers = {1,2,3,4,5};
+            int result = Kata.calMaximumOf(numbers);
+            assertEquals(5,result);
+    }
 
 
-
+   /* @Test
+    public void arrayTotalCanBeCalculated(){
+            int [] numbers = {1,2,3,4,5};
+            int result = Kata.calTotalOf(numbers);
+            assertEquals(15,result);
+    }*/
 }
 
 
