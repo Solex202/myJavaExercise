@@ -11,7 +11,7 @@ public class CalculatingCharges {
         double total = 0.00;
 
         while (hour != -1){
-            if (hour < 1) {
+            if (hour < 1 || hour > 24) {
                 System.out.println("invalid, enter valid input");
                 hour = scan.nextInt();
             }else {
@@ -23,7 +23,7 @@ public class CalculatingCharges {
 
 
         }
-        System.out.printf("total of yesterday receipt %.2f", total);
+        System.out.printf("total of yesterday receipt is $%.2f", total);
 
     }
 

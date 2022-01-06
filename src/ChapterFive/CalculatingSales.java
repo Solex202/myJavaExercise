@@ -15,7 +15,7 @@ public class CalculatingSales {
         int productNumber = scan.nextInt();
 
 //        while (productNumber != -1) {
-            while (productNumber > 5 || productNumber < 0) {
+            while (productNumber > 5 || productNumber <= 0) {
                 System.out.println("Invalid product number");
                 System.out.println();
                 System.out.println("--Enter product number--");
@@ -23,37 +23,31 @@ public class CalculatingSales {
             }
             System.out.println("--Enter quantity sold--");
             int quantitySold = scan.nextInt();
-            while (quantitySold < 0) {
+            while (quantitySold <= 0) {
                 System.out.println("Quantity not recognized");
                 System.out.println();
-                System.out.println("Enter quantity sold");
+                System.out.println("--Enter quantity sold--");
                 quantitySold = scan.nextInt();
             }
 
-            switch (productNumber) {
-                case 1:
-                    retailPrice = 2.98;
+        switch (productNumber) {
+            case 1 -> retailPrice = 2.98;
+
 //                retailValue = retailPrice * quantitySold;
-                    break;
-                case 2:
-                    retailPrice = 4.50;
+            case 2 -> retailPrice = 4.50;
+
 //                retailValue = retailPrice * quantitySold;
-                    break;
-                case 3:
-                    retailPrice = 9.98;
+            case 3 -> retailPrice = 9.98;
+
 //                retailValue = retailPrice * quantitySold;
-                    break;
-                case 4:
-                    retailPrice = 4.49;
+            case 4 -> retailPrice = 4.49;
+
 //                retailValue = retailPrice * quantitySold;
-                    break;
-                case 5:
-                    retailPrice = 6.87;
+            case 5 -> retailPrice = 6.87;
+
 //                retailValue = retailPrice * quantitySold;
-                    break;
-                default:
-                    System.out.println("Invalid input");
-            }
+            default -> System.out.println("Invalid input");
+        }
 
             retailValue = retailPrice * quantitySold;
 
@@ -104,4 +98,4 @@ public class CalculatingSales {
 //             }
 //             if(productNumber == 5){
 //                 price = 6.87;
-//             }
+//           }

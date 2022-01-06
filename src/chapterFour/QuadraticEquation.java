@@ -15,6 +15,7 @@ public class QuadraticEquation {
         System.out.println("enter C");
         double c = scan.nextDouble();
 
+
         double root1 = (-(b)+Math.sqrt((b*b)-(4*a*c)))/2*a;
         double root2 = (-(b)-Math.sqrt((b*b)-(4*a*c)))/2*a;
 

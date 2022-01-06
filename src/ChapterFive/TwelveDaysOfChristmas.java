@@ -34,14 +34,14 @@ public class TwelveDaysOfChristmas {
                     case 5 -> System.out.println("Five golden rings");
                     case 4 -> System.out.println("Four calling bird ");
                     case 3 -> System.out.println("Three french hen");
-                    case 2 -> System.out.println("Two turtle dove");
-                    case 1 -> System.out.println("A partridge in a pear tree");
+                    case 2 -> System.out.println("Two turtle dove \nand");
+                    case 1 -> System.out.print("A partridge in a pear tree\n");
                 }
-                if (m == 0)break;
+               // if (m == 0)break;
 
             }
-            System.out.println("=".repeat(40));
-            System.out.println("=".repeat(40));
+            System.out.println("=".repeat(52));
+            System.out.println("=".repeat(52));
         }
     }
 }

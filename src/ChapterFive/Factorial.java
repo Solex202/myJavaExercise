@@ -5,13 +5,13 @@ public class Factorial {
     public static void main(String[] args) {
         System.out.println("Numbers\t\t Factorial");
         int number = 5;
-        for (int numbers = 1; numbers  <= number;numbers++){
+        for (int i = 1; i  <= number;i++){
             long factorial = 1;
-            System.out.print( numbers + "\t\t");
-            for (int i = numbers; i >= 1; i--) {
+            System.out.print( i + "\t\t");
+            for (int j = i; j >= 1; j--) {
                // factorial *= i;
-                System.out.print( i + "     ");
-                factorial *= i;
+                System.out.print( j + "   ");
+                factorial *= j;
             }
             System.out.print(factorial);
 
