@@ -4,7 +4,7 @@ public class CompoundInterest {
     public static void main(String[] args) {
 
         double amount;
-        double principal = 1000.0;
+        double principal = 1000000.0;
        // double rate = 0.05 - 0.10;
 
 
@@ -18,7 +18,7 @@ public class CompoundInterest {
                 amount = principal * Math.pow(1.0 + (rate*0.01), year);
 
 
-                System.out.printf("%2d%20d%25.2f%n", year,rate, amount);
+                System.out.printf("%2d%20d%27.2f%n", year,rate, amount);
             }
         }
     }
