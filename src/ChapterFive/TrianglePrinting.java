@@ -16,5 +16,5 @@ public class TrianglePrinting {
             System.out.println();
         }
     }
-//07031054664
+
 }
