@@ -12,9 +12,8 @@ public class QualifyPoint {
             System.out.println("enter a number");
             int average = scan.nextInt();
             System.out.println(qualifyPoint(average));
-            //qualifyPoint(average);
         } catch (IllegalArgumentException e) {
-            System.out.println("Exception: illegal argument");
+            System.out.println("Exception: average score exceeded");
         }
     }
 
@@ -25,25 +24,26 @@ public class QualifyPoint {
             if (average < 60) {
                 n = 0;
             }
-            else if (average >= 60 && average <= 69) {
+            else
+                if (average <= 69) {
                 n = 1;
             }
-            else if (average > 69 && average <= 79) {
+            else
+                if (average <= 79) {
                 n = 2;
             }
-            else if (average >= 80 && average <= 89) {
+            else
+                if (average <= 89) {
                 n = 3;
             }
-            else if (average >= 90 && average <= 100) {
+            else
+                if (average <= 100) {
                 n = 4;
 
-            } else throw new IllegalArgumentException();
-           // else{
-            //        System.out.println("incorrect average score");
-             //   }
-
+            }
         }
-    return n;
+        throw new IllegalArgumentException();
+
     }
 
 }
