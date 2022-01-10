@@ -25,7 +25,7 @@ public class DistanceBetweenPoints {
 
     public static double distance(int x1,int x2,int y1,int y2){
 
-        double value = 0;
+        double value ;
          value = Math.sqrt((Math.pow(x2 - x1,2.0)) + Math.pow(y2-y1,2.0));
 
 

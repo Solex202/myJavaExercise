@@ -26,7 +26,7 @@ public class HypotenuseCalculation {
 
     public static double hypotenuse(double sideA, double sideB){
 
-        double c = 0;
+        double c ;
 
         c = Math.sqrt(Math.pow(sideA,2.0) + Math.pow(sideB,2.0));
 
