@@ -16,7 +16,7 @@ public class RoundingNumber {
     public static int rounding(double x){
         int y;
 
-        y = (int) Math.floor(x + 0.5)/100;
+        y = (int) Math.floor(x + 0.5);
 
    return y;
     }
