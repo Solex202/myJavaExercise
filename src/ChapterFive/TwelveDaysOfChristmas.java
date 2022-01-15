@@ -3,10 +3,10 @@ package ChapterFive;
 public class TwelveDaysOfChristmas {
 
     public static void main(String[] args) {
-        for (int i = 1; i <= 12 ; i++) {
+        for (int days = 1; days <= 12 ; days++) {
             System.out.print("\nOn the ");
 
-            switch (i) {
+            switch (days) {
                 case 12 -> System.out.print("12th");
                 case 11 -> System.out.print("11th");
                 case 10 -> System.out.print("10th");
@@ -22,7 +22,7 @@ public class TwelveDaysOfChristmas {
             }
 
             System.out.println(" day of christmas my true love gave to me,");
-            for (int m = i; m >= 0 ; m--) {
+            for (int m = days; m >= 0 ; m--) {
                 switch (m) {
                     case 12 -> System.out.println("Twelve drummers drumming");
                     case 11 -> System.out.println("Eleven pipers piping");

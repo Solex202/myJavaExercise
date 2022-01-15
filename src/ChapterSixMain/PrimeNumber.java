@@ -10,12 +10,10 @@ public class PrimeNumber {
 
         int number = scan.nextInt();
         int count = 0;
-        // scan.close();
-        // System.out.println("Factors of " + number + " are:");
         for (int loopCounter = 1; loopCounter <= number; loopCounter++) {
 
             if (number % loopCounter == 0) {
-                // System.out.print(loopCounter + " ");
+
                 count++;
             }
         }
