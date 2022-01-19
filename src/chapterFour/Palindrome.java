@@ -8,21 +8,21 @@ public class Palindrome{
     public static void main(String... args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("enter a valid number: ");
-        int judith = scan.nextInt();
+        int digit = scan.nextInt();
 
-        int firstDigit = judith / 1000;
+        int firstDigit = digit / 1000;
         System.out.println(firstDigit);
 
-        int secondDigit = (judith % 1000) / 100;
+        int secondDigit = (digit % 1000) / 100;
         System.out.println(secondDigit);
 
-        int thirdDigit = (judith % 100) / 10;
+        int thirdDigit = (digit % 100) / 10;
         System.out.println(thirdDigit);
 
-        int fourthDigit = (judith % 10) / 1;
+        int fourthDigit = (digit % 10) ;
         System.out.println(fourthDigit);
 
-        //int fifthDigit = (judith % 10) / 1;
+        //int fifthDigit = (digit % 10) / 1;
         //System.out.println("fifthDigit");
 
         if (firstDigit == fourthDigit) {

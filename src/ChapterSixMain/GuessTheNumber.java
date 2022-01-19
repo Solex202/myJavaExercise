@@ -3,7 +3,7 @@ package ChapterSixMain;
 import java.util.Scanner;
 
 public class GuessTheNumber {
-        private static Scanner scan = new Scanner(System.in);
+        private static final Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
 
 //        int min = 1;
@@ -45,7 +45,7 @@ public class GuessTheNumber {
 
 
           }
-            System.out.println("Do you wish to continue\n yes \n no?");
+            System.out.println("Do you wish to continue\nyes \nno?");
             String userInput = scan.nextLine();
             if (userInput == "yes") randomGenerator();
             else System.exit(0);
