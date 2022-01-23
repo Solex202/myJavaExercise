@@ -15,7 +15,7 @@ public class WorldPopulation {
             System.out.printf("%d\t\t\t%.2f\t\t\t\t\t",year, currentPopulation);
                 currentPopulation += (currentPopulation * 0.0105);
             System.out.printf("%.2f%n", currentPopulation);
-//
+
 
             if (worldPopulation * 2 == currentPopulation){
                 System.out.printf("doubled pop is: %f", currentPopulation);

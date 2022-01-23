@@ -1,6 +1,7 @@
 package ChapterSixMain;
 
 import java.security.SecureRandom;
+import static java.lang.Math.PI;
 
 public class RandomNumber {
     public static void main(String[] args) {
