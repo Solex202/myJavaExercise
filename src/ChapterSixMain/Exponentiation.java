@@ -7,13 +7,13 @@ public class Exponentiation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter base");
+        display("Enter base");
         int base = scan.nextInt();
-        System.out.println("Enter exponent");
+        display("Enter exponent");
         int exponent = scan.nextInt();
 
         int result = integerPower(base,exponent);
-        System.out.println("value is " + result);
+        display("value is " + result);
     }
 
     public static int integerPower(int base, int exponent){
@@ -28,5 +28,7 @@ public class Exponentiation {
 
    return value;
     }
-
+    public static void display(String message) {
+        System.out.println(message);
+    }
 }

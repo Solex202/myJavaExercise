@@ -6,13 +6,13 @@ public class TemperatureConversion {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter fahrenheit");
+        display("Enter fahrenheit");
         int fahrenheit = scan.nextInt();
-        System.out.println("celsius is " + celsius(fahrenheit) + "\n");
+        display("celsius is " + celsius(fahrenheit) + "\n");
 
-        System.out.println("Enter celsius");
+        display("Enter celsius");
         int celsius = scan.nextInt();
-        System.out.println("fahrenheit is " + fahrenheit(celsius));
+        display("fahrenheit is " + fahrenheit(celsius));
     }
 
     public static  int celsius(int fahrenheit){
@@ -34,4 +34,8 @@ public class TemperatureConversion {
             fahrenheit = (int) (9.0 / 5.0 * (celsius + 32));
         return fahrenheit;
         }
+
+    public static void display(String message){
+        System.out.println(message);
+    }
 }

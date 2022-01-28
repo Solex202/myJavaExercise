@@ -11,7 +11,7 @@ public class GuessTheNumber {
 //        int guessNumber;
 //        guessNumber = (int)(Math.random() * (max - min + 1) + 1);
 //        System.out.println(  guessNumber);
-
+        System.out.println(randomGenerator());
         System.out.println("Guess the number: ");
         int number = scan.nextInt();
 

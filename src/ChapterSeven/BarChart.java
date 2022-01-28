@@ -15,7 +15,7 @@ public class BarChart {
            System.out.printf("%02d - %02d:  ", counter * 10, counter * 10 + 9);
        }
             for (int star = 0; star < arr[counter]; star++) {
-                System.out.println("*");
+                System.out.print("*");
 
 
             }

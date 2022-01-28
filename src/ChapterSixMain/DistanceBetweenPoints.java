@@ -9,13 +9,13 @@ public class DistanceBetweenPoints {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter value of x2");
+        display("Enter value of x2");
         int x2 = scan.nextInt();
-        System.out.println("Enter value of x1");
+        display("Enter value of x1");
         int x1 = scan.nextInt();
-        System.out.println("Enter value of y2");
+        display("Enter value of y2");
         int y2 = scan.nextInt();
-        System.out.println("Enter value of y1");
+        display("Enter value of y1");
         int y1 = scan.nextInt();
 
         double result = distance(x1,x2,y1,y2);
@@ -30,5 +30,8 @@ public class DistanceBetweenPoints {
 
 
    return value;
+    }
+    public static void display(String message) {
+        System.out.println(message);
     }
 }

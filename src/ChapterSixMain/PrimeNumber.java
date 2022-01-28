@@ -6,7 +6,7 @@ public class PrimeNumber {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a number");
+        display("Enter a number");
 
         int number = scan.nextInt();
         int count = 0;
@@ -19,10 +19,14 @@ public class PrimeNumber {
         }
 
         if (count != 1 && count < 3) {
-            System.out.println(number + " is a prime number");
+            display(number + " is a prime number");
         }
-        else System.out.println(number + " is not a prime number");
-
-
+        else display(number + " is not a prime number");
     }
+
+        public static  void display(String message) {
+            System.out.println(message);
+        }
+
 }
+
