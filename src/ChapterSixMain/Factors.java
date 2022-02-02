@@ -17,5 +17,7 @@ public class Factors {
                 System.out.print(loopCounter + " ");
             }
         }
+
+        System.out.println(System.out);
     }
 }
