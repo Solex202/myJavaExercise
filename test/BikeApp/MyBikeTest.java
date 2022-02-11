@@ -1,15 +1,22 @@
 package BikeApp;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MyBikeTest {
 
+    myBike bike;
+
+    @BeforeEach
+    public void setUp(){
+        bike = new myBike("okada");
+    }
     @Test
     public void bikeCanBeTurnedOn(){
       //given that we have a bike and we can turn it on
-      myBike bike = new myBike("okada");
+     // myBike bike = new myBike("okada");
       bike.getName();
       assertEquals("okada",bike.getName());
       bike.turnOn();
@@ -21,7 +28,7 @@ public class MyBikeTest {
     @Test
     public void bikeCanBeTurnedOff(){
         //my bike should have a name
-        myBike bike = new myBike("okada");
+        //myBike bike = new myBike("okada");
         //turn on bike
         bike.turnOn();
         assertTrue(bike.isOn());
@@ -35,7 +42,7 @@ public class MyBikeTest {
 
     @Test
     public void bikeCanBeAcceleratedBy1(){
-    myBike bike = new myBike("okada");
+    //myBike bike = new myBike("okada");
     bike.turnOn();
     assertTrue(bike.isOn());
     for(int i = 0;i < 19;i++) {
@@ -48,7 +55,7 @@ public class MyBikeTest {
 
     @Test
     public void bikeCanBeAcceleratedBy2(){
-      myBike bike = new myBike("okada");
+      //myBike bike = new myBike("okada");
       bike.turnOn();
       assertTrue(bike.isOn());
       for(int i = 0;i < 19;i++){
@@ -63,7 +70,7 @@ public class MyBikeTest {
 
     @Test
     public void bikeCanBeAcceleratedBy3(){
-        myBike bike = new myBike("okada");
+        //myBike bike = new myBike("okada");
         bike.turnOn();
         assertTrue(bike.isOn());
         for(int i = 0;i < 23;i++){
@@ -77,7 +84,7 @@ public class MyBikeTest {
     }
     @Test
     public void bikeCanBeAcceleratedBy4(){
-        myBike bike = new myBike("okada");
+       // myBike bike = new myBike("okada");
         bike.turnOn();
         assertTrue(bike.isOn());
         for(int i = 0;i < 26;i++){

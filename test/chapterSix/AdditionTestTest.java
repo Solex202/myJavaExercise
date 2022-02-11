@@ -1,15 +1,20 @@
 package chapterSix;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AdditionTestTest {
 
+    AddTwoIntegers adder;
+    @BeforeEach
+    public void setUp(){
+        adder = new AddTwoIntegers();
+    }
     @Test
     void testCanAddTwoIntegers(){
-        //given
-        AddTwoIntegers adder = new AddTwoIntegers();
+
         //when
         int result = adder.add(5,6);
         //check
@@ -17,8 +22,7 @@ class AdditionTestTest {
     }
     @Test
     void testCanAddTwoIntegersWithNegativeValue(){
-        //given
-        AddTwoIntegers adder = new AddTwoIntegers();
+
         //when
         int result = adder.add(5,-14);
         //check
@@ -26,8 +30,7 @@ class AdditionTestTest {
     }
     @Test
     void testCanMultiply(){
-        //given
-        AddTwoIntegers adder = new AddTwoIntegers();
+
         //when
         int result = adder.multiply(10,20);
         //assert
@@ -35,8 +38,7 @@ class AdditionTestTest {
     }
         @Test
         void testCanSubtract(){
-            //given
-            AddTwoIntegers adder = new AddTwoIntegers();
+
             //when
             int result = adder.subtract(100,20);
             //assert
@@ -44,8 +46,7 @@ class AdditionTestTest {
         }
     @Test
     void testCanDivide(){
-        //given
-        AddTwoIntegers adder = new AddTwoIntegers();
+
         //when
         int result = adder.divide(100,2);
         //assert
@@ -54,8 +55,7 @@ class AdditionTestTest {
 
     @Test
     void testCanDivide_Modulo(){
-        //given
-        AddTwoIntegers adder = new AddTwoIntegers();
+
         //when
         int result = adder.modulo(5,2);
         //assert

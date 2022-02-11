@@ -1,5 +1,6 @@
 package TelevisionDriver;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,12 +8,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MyTelevisionTest {
 
+    MyTelevision television;
+
+    @BeforeEach
+    public void setUp(){
+        television = new MyTelevision("infinix tv");
+
+    }
 
     @Test
     public void tvCanBeTurnedOnTest() {
         //given that we have a television and we can turn it on
-        MyTelevision television = new MyTelevision("infinix tv");
-
         television.getName();
         assertEquals("infinix tv", television.getName());
         //when tv is on
@@ -26,8 +32,6 @@ public class MyTelevisionTest {
 
     @Test
     public void tvCanBeTurnedOffTest() {
-        //my tv must have a name
-        MyTelevision television = new MyTelevision("infinix tv");
         //my tv must be on
         //when tv is on
         television.turnOn();
@@ -41,13 +45,10 @@ public class MyTelevisionTest {
 
     @Test
     public void volumeCanBeIncreasedBy1() {
-        //my tv should be on
-        MyTelevision television = new MyTelevision("infinix tv");
         television.turnOn();
         assertTrue(television.isOn());
         //to increase volume
         television.getVolume();
-
         for(int i = 0;i <=100 ;i++){
          television.increaseVolume();
          }//
@@ -61,8 +62,7 @@ public class MyTelevisionTest {
 
     @Test
     public void getTelevisionChannel(){
-    MyTelevision television = new MyTelevision("infinix tv");
-    television.turnOn();
+        television.turnOn();
     assertTrue(television.isOn());
     //get channels
         television.setChannels(10);
@@ -72,7 +72,7 @@ public class MyTelevisionTest {
 
     @Test
     public void volumeCanBeDecreasedBy1() {
-    MyTelevision television = new MyTelevision("infinix  tv");
+
     television.turnOn();
     assertTrue(television.isOn());
     television.getVolume();
@@ -89,8 +89,7 @@ public class MyTelevisionTest {
     }
     @Test
     public void channelCanBeIncreasedBy1(){
-       MyTelevision television = new MyTelevision("infinix tv");
-       television.turnOn();
+        television.turnOn();
        assertTrue(television.isOn());
        television.getChannels();
        television.increaseChannel();
@@ -100,7 +99,7 @@ public class MyTelevisionTest {
     @Test
     public void channelCanBeDecreasedBy1(){
         //given
-        MyTelevision television = new MyTelevision("infinix tv");
+
         television.turnOn();
         assertTrue(television.isOn());
         //when

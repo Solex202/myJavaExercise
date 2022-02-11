@@ -22,6 +22,13 @@ public class BarChart {
                 System.out.println();
 
         }
-
+        String tree = "pine";
+        int height = 55;
+        int count = 0;
+        if (tree.equals("pine")) {
+            //int height = 55;
+            count = count + 1;
+        }
+        System.out.print(height + count);
     }
 }

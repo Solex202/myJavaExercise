@@ -57,7 +57,7 @@ public class GuessTheNumber {
         int max = 1000;
         int guessNumber;
         guessNumber = (int)(Math.random() * (max - min + 1) + 1);
-        System.out.println(  guessNumber);
+        System.out.println(guessNumber);
 
 
         return guessNumber;
