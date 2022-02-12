@@ -5,9 +5,13 @@ import java.util.*;
 public class GuessNumber {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+        start();
+    }
+
+    private static void start() {
         int randomGenerator = getRandomGenerator();
         System.out.println(randomGenerator);
-    int guessCount = 0;
+        int guessCount = 0;
         checkLoop(randomGenerator, guessCount);
     }
 
@@ -18,66 +22,35 @@ public class GuessNumber {
     }
 
     private static void checkLoop(int randomGenerator, int guessCount) {
-        while(true) {
+//        while(true) {
             display("Guess a number between 1 and 1000:");
             int userInput = scanner.nextInt();
             guessCount++;
-
-            if (checkGuess(randomGenerator, guessCount, userInput)) break;
-        }
+            checkGuess(randomGenerator, guessCount, userInput);
+//        }
     }
 
     private static boolean checkGuess(int randomGenerator, int guessCount, int userInput) {
-        if(randomGenerator == userInput) {
-            display("yo! congrats,you win!!!");
-            display("You had " + guessCount + " guesses");
-            display("!!!!!!!!!!!!!!");
-            display("Do you wish to continue?\nyes\nno");
-            String userChoice = scanner.nextLine();
-            switch(userChoice){
-                case "yes":
-                    if(userChoice.equals("yes")){
-                        getRandomGenerator();
-                    }
-            }
-//
-//            if(userChoice.equals("yes")){
-//                getRandomGenerator();
-//                int user = scanner.nextInt();
-//            }
-//            else if(userChoice.equals("no")){
-//                System.exit(0);
-//            }
-            return true;}
-        else if(userInput > randomGenerator){
+        if (userInput > randomGenerator) {
             display("too high,try again");
-        }
-        else {
+        } else if (userInput < randomGenerator){
             display("too low,try again");
         }
-        return false;
+        else if(randomGenerator == userInput) {
+            while(true) {
+                display("yo! congrats,you win!!!");
+//            display("You had " + guessCount + " guesses");
+//            display("!!!!!!!!!!!!!!");
+                display("Do you wish to continue?\nyes\nno");
+                String userChoice = scanner.nextLine().toUpperCase();
+                if (userChoice.equals("yes")) start();
+//            else System.exit(0);
+            }
+        }
+        return true;
     }
-
 
     public static void display(String message) {
         System.out.println(message);
     }
 }
-//
-
-
-    @Test
-
-    void testContactListCanBeGotten(){
-        //given that we have a phonebook and contacts
-        PhoneBook phoneBook = new PhoneBook();
-        Contact lota = new Contact("lota","09056819817");
-        Contact dee = new Contact("dee","09056819817");
-        //when we have contacts in it
-        phoneBook.addContact(lota);
-        phoneBook.addContact(dee);
-        //assert
-        assertEquals(2, phoneBook.getAllContact().size());
-        List<Contact> expected = new ArrayList<>(Arrays.asList(lota, dee));  //{lota, dee}.toArray() [lota,dee]
-        assertArrayEquals(expected.toArray(), phoneBook.getAllContact().toArray());
-    }
