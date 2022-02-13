@@ -9,34 +9,35 @@ public class NumberGuessing {
         int randomNumbers = getRandomNumbers();
         System.out.println(randomNumbers);
         int tryCount = 0;
-        while(true){
+        randomCheck(randomNumbers, tryCount);
+    }
 
-        System.out.println("guess a number");
+    private static void randomCheck(int randomNumbers, int tryCount) {
+        while(true){
+            display("guess a number");
         int userInput = scanner.nextInt();
         tryCount++;
 
         if(userInput > randomNumbers){
-                System.out.println("too high,try again!");
+                display("too high,try again!");
             }
         else if(userInput < randomNumbers){
-                System.out.println("too low,try again!");
+                display("too low,try again!");
             }
-        while(userInput == randomNumbers){
-                System.out.println("yo,you won");
-            System.out.println("you had " + tryCount + " tries");
-            getRandomNumbers();
-                //break;
+        else {
+                display("yo,you won");
+                display("you had " + tryCount + " tries");
+                break;
             }
-                //System.out.println("do you wish to continue?");
         }
-
-
     }
 
     private static int getRandomNumbers() {
         Random rand = new Random();
+        return rand.nextInt(1000) + 1;
+    }
 
-        int randomNumbers = rand.nextInt(1000) + 1;
-        return randomNumbers;
+    public static void display(String message) {
+        System.out.println(message);
     }
 }

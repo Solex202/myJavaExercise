@@ -22,12 +22,12 @@ public class GuessNumber {
     }
 
     private static void checkLoop(int randomGenerator, int guessCount) {
-//        while(true) {
+        while(true) {
             display("Guess a number between 1 and 1000:");
             int userInput = scanner.nextInt();
             guessCount++;
             checkGuess(randomGenerator, guessCount, userInput);
-//        }
+      }
     }
 
     private static boolean checkGuess(int randomGenerator, int guessCount, int userInput) {
