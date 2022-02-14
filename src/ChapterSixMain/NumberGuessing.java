@@ -1,15 +1,30 @@
 package ChapterSixMain;
 
+import java.security.SecureRandom;
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
 public class NumberGuessing {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        int randomNumbers = getRandomNumbers();
-        System.out.println(randomNumbers);
+
+
+
         int tryCount = 0;
-        randomCheck(randomNumbers, tryCount);
+        do {
+
+            randomCheck(getRandomNumbers(), tryCount);
+            System.out.println("Do you want to continue: ");
+            String userInput = scanner.next();
+            if(Objects.equals(userInput, "yes")){
+                randomCheck(getRandomNumbers(),tryCount);
+            }
+            else {
+                System.exit(0);
+            }
+        }
+        while(true);
     }
 
     private static void randomCheck(int randomNumbers, int tryCount) {
@@ -17,6 +32,7 @@ public class NumberGuessing {
             display("guess a number");
         int userInput = scanner.nextInt();
         tryCount++;
+
 
         if(userInput > randomNumbers){
                 display("too high,try again!");
