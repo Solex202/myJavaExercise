@@ -5,8 +5,38 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Random;
 
-public class TicTacToe {
+public class PrintingArrays {
+
+    public static void main(String[] args) {
+        int  size = 30;
+        int [] array = randomArray(size);
+
+        printArray(array);
+//        for (int i = 0; i < array.length; i++){
+//            System.out.println(array[i]);
+//        }
+//        System.out.println();
+    }
+
+    public static int[] randomArray(int size) {
+        Random random = new Random();
+        int[] a = new int[size];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = random.nextInt(100);
+        }
+        return a;
+    }
+
+    public static void printArray(int[] a) {
+        System.out.print("{" + a[0]);
+        for (int i = 1; i < a.length; i++) {
+            System.out.print(", " + a[i]);
+        }
+        System.out.println("}");
+    }
+
 
 
 
