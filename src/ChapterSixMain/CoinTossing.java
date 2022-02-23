@@ -9,7 +9,7 @@ public class CoinTossing {
         System.out.println("""
                 MENU:
                 Press 1 to to toss a coin
-                Press 2 to exit program""");
+                Press other keys to exit program""");
 
         int choice = scanner.nextInt();
         int count = 0;
@@ -20,7 +20,8 @@ public class CoinTossing {
             System.out.println("""
                 MENU:
                 Press 1 to to toss a coin
-                Press 2 to exit program""");
+                Press 2 to exit program
+                """);
 
             choice = scanner.nextInt();
         }
