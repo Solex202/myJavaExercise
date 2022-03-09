@@ -35,31 +35,31 @@ public class SevenSegmentDisplaySession {
                 if(firstDigit == 1){
                     displayA();
                 }
-           if(secondDigit == 1){
-               displayB();
-           }
-           if(thirdDigit == 1){
-               displayC();
-           }
-           if(fourthDigit == 1){
-               displayD();
-           }
-            if(fifthDigit == 1){
-                displayE();
-            }
-           if(sixthDigit == 1){
-               displayF();
-           }
-           if(seventhDigit == 1){
-               displayG();
-           }else System.out.println(" ");
-            }else System.exit(0);
+               if(secondDigit == 1){
+                   displayB();
+               }
+               if(thirdDigit == 1){
+                   displayC();
+               }
+               if(fourthDigit == 1){
+                   displayD();
+               }
+                if(fifthDigit == 1){
+                    displayE();
+                }
+               if(sixthDigit == 1){
+                   displayF();
+               }
+               if(seventhDigit == 1){
+                   displayG();
+               }else System.out.println(" ");
+                }else System.exit(0);
 
-        }
-    else {
+            }
+            else {
             System.out.println("invalid digit");
             inputMethod();
-        }
+            }
     }
 
 
@@ -135,8 +135,7 @@ public class SevenSegmentDisplaySession {
                     array[i][j] = 1;
                 }
             }
-
-            }
+        }
         public static void displayF(){
            // array [2][0] = 1;
             //array [1][0] = 1;
@@ -146,21 +145,18 @@ public class SevenSegmentDisplaySession {
                 array[i][j] = 1;
                 }
             }
-
-            }
+        }
         public static void displayG(){
           //array [2][0] = 1;
             //array [2][1] = 1;
             //array [2][2] = 1;
            // array [2][3] = 1;
             for (int i = 2; i < 3; i++) {
-                for (int j = 0; j <= 3 ; j++) {
-            array[i][j] = 1;
+                for (int j = 0; j <= 3; j++) {
+                    array[i][j] = 1;
                 }
             }
-            }
-
-
+        }
     }
 
 

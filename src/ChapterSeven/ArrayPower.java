@@ -17,7 +17,7 @@ public class ArrayPower   {
     }
 
     public static void printArray(double [] a) {
-        System.out.println("{");
+        System.out.print("{");
         for (int i = 0; i < a.length; i++) {
             System.out.printf("%.2f"+" ", a[i] );
         }

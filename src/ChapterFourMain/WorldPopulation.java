@@ -12,16 +12,16 @@ public class WorldPopulation {
         for (int year = 1; year <= 75 ; year++) {
            // System.out.printf("%d %30f",year, currentPopulation);
 //            System.out.print(year + "\t\t\t" + currentPopulation + "\t\t\t\t");
-            System.out.printf("%d\t\t\t%.2f\t\t\t\t\t",year, currentPopulation);
-                currentPopulation += (currentPopulation * 0.0105);
-            System.out.printf("%.2f%n", currentPopulation);
-
-
-            if (worldPopulation * 2 == currentPopulation){
-                System.out.printf("doubled pop is: %f", currentPopulation);
-            }else{
-                System.out.println("none");
-            }
+          System.out.printf("%d\t\t\t%.2f\t\t\t\t\t",year, currentPopulation);
+//                currentPopulation += (currentPopulation * 0.0105);
+//            System.out.printf("%.2f%n", currentPopulation);
+//
+//
+//            if (worldPopulation * 2 == currentPopulation){
+//                System.out.printf("doubled pop is: %f", currentPopulation);
+//            }else{
+//                System.out.println("none");
+//            }
 
         }
 
