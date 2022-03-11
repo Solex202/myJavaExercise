@@ -41,7 +41,7 @@ public class Invoice {
     }
 
     public void setQuantity(int quantity) {
-        if(quantity < 0){
+        if(quantity < 1){
             quantity = 0;
         }
         this.quantity = quantity;
@@ -52,7 +52,7 @@ public class Invoice {
     }
 
     public void setPrice(double price) {
-        if(price < 0){
+        if(price < 1){
             price = 0.0;
         }
         this.price = price;
@@ -62,7 +62,7 @@ public class Invoice {
         return price;
     }
 
-    public double getInvoiceAmount(int quantity, int price) {
+    public double getInvoiceAmount(int quantity, double price) {
         return  quantity * price;
     }
 }

@@ -56,13 +56,33 @@ class InvoiceTest {
     }
 
     @Test
+    void testGetAmount(){
+        //given
+        Invoice invoice = new Invoice("76","food",7,7.98);
+        //when
+        double amount = invoice.getInvoiceAmount(invoice.getQuantity(), invoice.getPrice());
+//         double invoiceAmount = invoice.getInvoiceAmount(-3,400);
+        //assert
+        assertEquals(55.86, amount);
+
+    }
+
+
+
+    @Test
     void testQuantityAndPriceNotNegative(){
         //given
         Invoice invoice = new Invoice("76","food",7,7.98);
         //when
-         double invoiceAmount = invoice.getInvoiceAmount(-3,400);
+        invoice.setQuantity(-3);
+        invoice.setPrice(-100);
+        double amount = invoice.getInvoiceAmount(invoice.getQuantity(), invoice.getPrice());
+
+//         double invoiceAmount = invoice.getInvoiceAmount(-3,400);
          //assert
-        assertEquals(0.0,invoiceAmount);
+        assertEquals(0.0, invoice.getPrice());
+        assertEquals(0, invoice.getQuantity());
+        assertEquals(0.0, amount);
 
     }
 
