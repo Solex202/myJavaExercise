@@ -19,6 +19,7 @@ public class Mystery {
              --row;
              System.out.println();
              }
+
          }
 
 }

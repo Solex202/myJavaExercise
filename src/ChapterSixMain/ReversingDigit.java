@@ -17,7 +17,10 @@ public class ReversingDigit {
         for (int i = num.length()-1; i >= 0 ; i--) {
             reverse += num.charAt(i);
 
+            if(number < 0){
+                System.out.println("not a valid digit");
         }
         System.out.println(reverse);
     }
 }
+    }

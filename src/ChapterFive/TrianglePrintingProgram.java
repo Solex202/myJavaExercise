@@ -31,7 +31,7 @@ public class TrianglePrintingProgram {
 //            System.out.println();
             for (int row = 1; row <= n; row++) {
                 for (int column = 1; column <= row; column++) {  //for C
-                     System.out.print("  ");
+                     System.out.print(" *");
                 }
                 for (int column = row; column <= n; column++) {
                     System.out.print("* ");
@@ -46,7 +46,7 @@ public class TrianglePrintingProgram {
                     System.out.print("  ");
                 }
                 for (int column = 1; column <= row; column++) {
-                    System.out.print("* ");
+                    System.out.print(" *");
                 }
                 System.out.println();
             }
