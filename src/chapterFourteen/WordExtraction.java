@@ -2,7 +2,7 @@ package chapterFourteen;
 
 public class WordExtraction {
 
-        public static String returnBalloon(String string){
+        public static void returnBalloon(String string){
             int countB = 0;
             int countA = 0;
             int countL = 0;
@@ -10,28 +10,34 @@ public class WordExtraction {
             int countN = 0;
 
         for (int i = 0; i < string.length(); i++) {
-            switch(string.charAt(i)){
-                case 'a' -> {
-                    if (string.charAt(i) == 'B') {
-                        countA++;
-                        break;
-                    }
+            switch(String.valueOf(string.charAt(i)).toLowerCase()) {
+                case "a" -> {
+                    countA++;
                 }
-                case 'b' ->{
-                    if (string.charAt(i) == 'A'){
-                        countB++;
-                        break;
-                    }
+                case "b" ->{
+                    countB++;
+                }
+                case "l" ->{
+                    countL++;
+                }
+                case "o" ->{
+                    countO++;
+                }
+                case "n" ->{
+                    countN++;
                 }
             }
         }
-        return null;
+            System.out.println(new StringBuilder().append(countA).append(" ").append(countB).append(" ").append(countL).append(" ").append(countN).append(" ").append(countO).toString());
+            System.out.println(Math.min(countB,Math.min(countA,Math.min(countL,Math.min(countO,countN)))));
+
     }
-    public static void main(String args[]) {
-        String str = "Hey this is Ram";
-        String[] words = str.split(" ", 3);
-        for (String word : words)
-            System.out.println(word.toString());
+    public static void main(String[] args) {
+//        String str = "Hey this is Ram";
+//        String[] words = str.split(" ", 3);
+//        for (String word : words)
+//            System.out.println(word.toString());
+        returnBalloon("HJSBALLLLOOOONNNAASJDNMMKMKAAANNOOLLBBJKSJIJLLOKMMOOOBBAALLUHNJUSHH");
 
     }
 
