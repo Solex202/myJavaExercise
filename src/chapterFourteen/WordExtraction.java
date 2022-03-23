@@ -2,11 +2,31 @@ package chapterFourteen;
 
 public class WordExtraction {
 
-    //    public static String returnBalloon(String string){
-//        for (int i = 0; i < string.length(); i++) {
-//            if (string.charAt(i) == 'b,a,l,l,o,o,n') {}
-//        }
-//    }
+        public static String returnBalloon(String string){
+            int countB = 0;
+            int countA = 0;
+            int countL = 0;
+            int countO = 0;
+            int countN = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+            switch(string.charAt(i)){
+                case 'a' -> {
+                    if (string.charAt(i) == 'B') {
+                        countA++;
+                        break;
+                    }
+                }
+                case 'b' ->{
+                    if (string.charAt(i) == 'A'){
+                        countB++;
+                        break;
+                    }
+                }
+            }
+        }
+        return null;
+    }
     public static void main(String args[]) {
         String str = "Hey this is Ram";
         String[] words = str.split(" ", 3);
