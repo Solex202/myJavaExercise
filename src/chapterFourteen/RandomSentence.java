@@ -57,7 +57,7 @@ public class RandomSentence {
     }
 
     public static void main(String[] args) {
-//        RandomSentence sentence = new RandomSentence();
+
         sentenceApp();
     }
 }
