@@ -15,12 +15,14 @@ public class Factors {
     }
 
     public static void factorFinding(int number) {
-    List<Integer> factors = new ArrayList<Integer>();
+    List<Integer> factors = new ArrayList<>();
         System.out.println("factors of " + number + " is");
         for (int counter = 1; counter <= number; counter++) {
          if(number % counter == 0){
              factors.add(counter);
              System.out.println(factors);
+//             factors.remove(3);
+//             System.out.println(factors);
 //             System.out.print(counter + "\t");
          }
         }

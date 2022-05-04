@@ -53,6 +53,7 @@ public class CountingLetter {
 //            System.out.println(IntStream.rangeClosed(1,10)
 //                    .summaryStatistics());
 //            System.out.println(IntStream.rangeClosed(1,10).map(numbers -> numbers * 2).sum());
+            IntStream.iterate(1,x -> x + 1).limit(10).forEach(System.out::println);
       }
     }
 

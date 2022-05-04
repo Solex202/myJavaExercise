@@ -1,6 +1,6 @@
 package chapterFourteen;
 
-public class RemovingSpaces {
+public class RemovingSpace {
 
     public static void main(String[] args) {
         String newString = "    chair  man  ".trim();

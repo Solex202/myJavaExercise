@@ -2,7 +2,7 @@ package chapterFourteen;
 
 import java.util.Scanner;
 
-public class ConvertingValues {
+public class ConvertingValue {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

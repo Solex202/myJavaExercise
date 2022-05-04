@@ -2,7 +2,7 @@ package chapterFourteen;
 
 import java.util.Scanner;
 
-public class CreatingThreeLetterStrings {
+public class CreatingThreeLetterString {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
