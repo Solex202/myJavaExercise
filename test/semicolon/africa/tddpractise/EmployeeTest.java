@@ -2,6 +2,8 @@ package semicolon.africa.tddpractise;
 
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -39,7 +41,7 @@ public class EmployeeTest {
         EmployeeClass employee2 = new EmployeeClass("deola", "oladeji", 45.23);
         //when
         double yearlySalary = employee.getMonthlySalary() * 12;
-
+//        Rectangle rect = new Rectangle();
         assertEquals(yearlySalary,1080.00 );
     }
 
