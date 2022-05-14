@@ -37,5 +37,9 @@ public class Square extends Quadrilateral{
         this.baseB = baseB;
     }
 
+    public double calculateArea(){
+        return (getBaseA() + getBaseB() / 2) * getHeight();
+    }
+
 
 }
