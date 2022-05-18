@@ -1,45 +1,30 @@
 package ChapterNine.quadrilateralInheritanceHeirachy;
 
-public class Square extends Quadrilateral{
+public class Trapezoid extends Quadrilateral{
 
-    private double baseA;
-    private double baseB;
-
-    private double height;
-
-    public Square(double x_axis, double y_axis, double baseA, double baseB, double height ) {
+    private double length;
+    private double width;
+    public Trapezoid(double x_axis, double y_axis, double width, double length) {
         super(x_axis, y_axis);
-        this.baseA = baseA;
-        this.baseB = baseB;
-        this.height = height;
-    }
-    public double getHeight() {
-        return height;
+        this.length = length;
+        this.width = width;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+
+    public double getLength() {
+        return length;
     }
 
-    public double getBaseA() {
-        return baseA;
+    public void setLength(double length) {
+        this.length = length;
     }
 
-    public void setBaseA(double baseA) {
-        this.baseA = baseA;
+    public double getWidth() {
+        return width;
     }
 
-    public double getBaseB() {
-        return baseB;
+    public void setWidth(double width) {
+        this.width = width;
     }
-
-    public void setBaseB(double baseB) {
-        this.baseB = baseB;
-    }
-
-    public double calculateArea(){
-        return (getBaseA() + getBaseB() / 2) * getHeight();
-    }
-
 
 }
