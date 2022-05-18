@@ -25,4 +25,7 @@ public class Rectangle extends Quadrilateral{
         this.width = width;
     }
 
+    public double calculateArea() {
+        return getWidth() * getLength();
+    }
 }

@@ -1,13 +1,13 @@
 package ChapterNine.quadrilateralInheritanceHeirachy;
 
-public class Square extends Quadrilateral{
+public class Trapezium extends Quadrilateral{
 
     private double baseA;
     private double baseB;
 
     private double height;
 
-    public Square(double x_axis, double y_axis, double baseA, double baseB, double height ) {
+    public Trapezium(double x_axis, double y_axis, double baseA, double baseB, double height ) {
         super(x_axis, y_axis);
         this.baseA = baseA;
         this.baseB = baseB;
