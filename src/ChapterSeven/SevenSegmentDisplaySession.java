@@ -74,8 +74,6 @@ public class SevenSegmentDisplaySession {
                         if (array[row][column] == 1) {
                         System.out.print("#");
                     }
-
-
                 }
                 System.out.println();
             }
@@ -91,8 +89,7 @@ public class SevenSegmentDisplaySession {
                     array[i][j] = 1;
                 }
             }
-
-            }
+    }
         public static void displayB(){
             // array [0][3] = 1;
             // array [1][3] = 1;
@@ -112,8 +109,7 @@ public class SevenSegmentDisplaySession {
                     array[i][j] = 1;
                 }
             }
-
-            }
+    }
         public static void displayD() {
           //  array[4][3] = 1;
            // array[4][2] = 1;
@@ -125,7 +121,7 @@ public class SevenSegmentDisplaySession {
                 }
             }
 
-        }
+    }
         public static void displayE(){
             //array [4][0] = 1;
             //array [3][0] = 1;
@@ -137,7 +133,7 @@ public class SevenSegmentDisplaySession {
             }
         }
         public static void displayF(){
-           // array [2][0] = 1;
+            // array [2][0] = 1;
             //array [1][0] = 1;
             //array [0][0] = 1;
             for (int i = 0; i <= 2 ; i++) {
@@ -147,10 +143,10 @@ public class SevenSegmentDisplaySession {
             }
         }
         public static void displayG(){
-          //array [2][0] = 1;
+            //array [2][0] = 1;
             //array [2][1] = 1;
             //array [2][2] = 1;
-           // array [2][3] = 1;
+            // array [2][3] = 1;
             for (int i = 2; i < 3; i++) {
                 for (int j = 0; j <= 3; j++) {
                     array[i][j] = 1;

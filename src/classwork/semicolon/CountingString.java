@@ -8,6 +8,6 @@ public class CountingString {
     public static void main(String[] args) {
         int count = 0;
 
-        Map<String> words = new HashMap<String, String>();
+//        Map<String> words = new HashMap<String, String>();
     }
 }

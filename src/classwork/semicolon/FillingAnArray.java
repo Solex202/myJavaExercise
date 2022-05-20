@@ -15,7 +15,6 @@ public class FillingAnArray {
                     arrays[array][row][column] = 10 + random.nextInt(40);
 
                     System.out.print(Arrays.asList(arrays[array][row][column]));
-//            System.out.print( arrays[array][row][column] + " ");
                 }
             }
 
