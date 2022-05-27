@@ -18,19 +18,23 @@ class MyArrayListTest {
         myArrayList = new MyArrayList();
     }
 
-    @Test
-    void testThatArrayListIsEmpty(){
-        assertFalse(myArrayList.isEmpty());
-
-    }
+//    @Test
+//    void testThatArrayListIsEmpty(){
+//        assertTrue(myArrayList.isEmpty());
+//
+//    }
 
     @Test
     void testThatCanAddElementsInArrayList(){
         myArrayList.add("weed");
         myArrayList.add("shoe");
         myArrayList.add("cloth");
-
+//        assertEquals(3, myArrayList.size());
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", null , null}, myArrayList.getList());
     }
+
+    @Test
+
 
     @AfterEach
     void tearDown() {
