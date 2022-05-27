@@ -7,20 +7,38 @@ public class MyArrayList {
 
 
     private boolean isEmpty = false;
-    private final String [] list  = new String[5];
     private int size;
+    private int capacity;
+    String [] list;
 
-//    public boolean isEmpty() {
+
+    public MyArrayList(int capacity) {
+        list  = new String[capacity];
+    }
+
+    //    public boolean isEmpty() {
 //        return !isEmpty;
 //    }
 
     public void add(String element) {
         for (int i = 0; i < list.length; i++) {
+            checkArrayCapacity();
             if(list[i] == null){
             list[i] = element;
             size++;
             break;}
 
+        }
+    }
+
+    private void checkArrayCapacity() {
+
+        String [] newArray = list;
+        capacity *= 2;
+        list = new String[capacity];
+        System.out.println(list.length);
+        for(int i = 0;i <  newArray.length; i++){
+            list[i] = newArray[i];
         }
     }
 

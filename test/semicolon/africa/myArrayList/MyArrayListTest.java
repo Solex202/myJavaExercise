@@ -15,7 +15,7 @@ class MyArrayListTest {
 
     @BeforeEach
     void setUp() {
-        myArrayList = new MyArrayList();
+        myArrayList = new MyArrayList(5);
     }
 
 //    @Test
@@ -34,6 +34,16 @@ class MyArrayListTest {
     }
 
     @Test
+    void testThatCapacityDoubleWhenItemIsAdded(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt"}, myArrayList.getList());
+    }
 
 
     @AfterEach
