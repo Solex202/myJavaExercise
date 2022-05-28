@@ -42,7 +42,24 @@ class MyArrayListTest {
         myArrayList.add("cow");
         myArrayList.add("skirt");
 
-        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt"}, myArrayList.getList());
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+    }
+
+    @Test
+    void testThatCanDeleteElementFromArray(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
+        myArrayList.remove(3);
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", null, "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
     }
 
 

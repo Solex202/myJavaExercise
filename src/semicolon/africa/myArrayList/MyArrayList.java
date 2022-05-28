@@ -13,6 +13,7 @@ public class MyArrayList {
 
 
     public MyArrayList(int capacity) {
+        this.capacity = capacity;
         list  = new String[capacity];
     }
 
@@ -24,21 +25,22 @@ public class MyArrayList {
         for (int i = 0; i < list.length; i++) {
             checkArrayCapacity();
             if(list[i] == null){
-            list[i] = element;
-            size++;
-            break;}
-
+                list[i] = element;
+                size++;
+                break;
+            }
         }
     }
 
     private void checkArrayCapacity() {
-
-        String [] newArray = list;
-        capacity *= 2;
-        list = new String[capacity];
-        System.out.println(list.length);
-        for(int i = 0;i <  newArray.length; i++){
-            list[i] = newArray[i];
+        if (capacity <= size) {
+            String[] newArray = list;
+            capacity *= 2;
+            list = new String[capacity];
+            System.out.println(list.length);
+            for (int i = 0; i < newArray.length; i++) {
+                list[i] = newArray[i];
+            }
         }
     }
 
@@ -48,5 +50,9 @@ public class MyArrayList {
 
     public String[] getList() {
         return list;
+    }
+
+    public void remove(int index) {
+
     }
 }
