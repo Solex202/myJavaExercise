@@ -63,7 +63,7 @@ class MyArrayListTest {
     }
 
     @Test
-    void testThatDeleteElementOutOfBound_throwsExceptions(){
+    void testThatDeleteElementOutOfBound_throwsException(){
         myArrayList.add("weed");
         myArrayList.add("shoe");
         myArrayList.add("cloth");
@@ -73,10 +73,22 @@ class MyArrayListTest {
 
         assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
 
-//        myArrayList.remove(13);
-
-//        assertArrayEquals(new String [] {"weed","shoe", "cloth","laptop", "cow", "skirt", null, null, null, null}, myArrayList.getList());
         assertThrows(IndexOutOfBoundsException.class, ()-> myArrayList.remove(13));
+
+    }
+
+    @Test
+    void testThatDeleteElementLessThanBound_throwsException(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
+        assertThrows(IndexOutOfBoundsException.class, ()-> myArrayList.remove(-1));
 
     }
 

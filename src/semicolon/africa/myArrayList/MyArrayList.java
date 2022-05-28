@@ -57,6 +57,9 @@ public class MyArrayList {
         if(index >= capacity){
             throw new IndexOutOfBoundsException("index out of bound");
         }
+        if(index < 0){
+            throw new IndexOutOfBoundsException("index out of bound");
+        }
         for (int i = 0; i < list.length; i++) {
             if (index == i){
                 list[i] = list[i + 1];
