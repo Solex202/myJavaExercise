@@ -1,5 +1,6 @@
 package semicolon.africa.myArrayList;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class MyArrayList {
@@ -53,6 +54,18 @@ public class MyArrayList {
     }
 
     public void remove(int index) {
+        for (int i = 0; i < list.length; i++) {
+            if (index == i){
+                list[i] = list[i + 1];
+                for (int j = i; j < list.length-1; j++) {
+                    list[j] = list[j + 1];
+                }
+                System.out.println(Arrays.toString(list));
+                size--;
+            }
 
+
+
+        }
     }
 }

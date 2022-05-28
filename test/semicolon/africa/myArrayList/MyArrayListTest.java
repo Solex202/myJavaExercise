@@ -58,9 +58,11 @@ class MyArrayListTest {
 
         myArrayList.remove(3);
 
-        assertArrayEquals(new String [] {"weed","shoe", "cloth", null, "cow", "skirt", null, null, null, null}, myArrayList.getList());
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "cow", "skirt", null, null, null, null, null}, myArrayList.getList());
 
     }
+
+
 
 
     @AfterEach
