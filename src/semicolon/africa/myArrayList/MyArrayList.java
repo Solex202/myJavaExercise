@@ -2,6 +2,7 @@ package semicolon.africa.myArrayList;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class MyArrayList {
 
@@ -38,7 +39,6 @@ public class MyArrayList {
             String[] newArray = list;
             capacity *= 2;
             list = new String[capacity];
-            System.out.println(list.length);
             for (int i = 0; i < newArray.length; i++) {
                 list[i] = newArray[i];
             }
@@ -66,12 +66,20 @@ public class MyArrayList {
                 for (int j = i; j < list.length-1; j++) {
                     list[j] = list[j + 1];
                 }
-                System.out.println(Arrays.toString(list));
                 size--;
             }
 
 
 
         }
+    }
+
+    public boolean contains(String element) {
+        for (String s : list) {
+            if (Objects.equals(s, element)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

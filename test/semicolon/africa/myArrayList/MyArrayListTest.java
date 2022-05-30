@@ -92,6 +92,36 @@ class MyArrayListTest {
 
     }
 
+    @Test
+    void testThatArrayListContains_a_particularElement(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
+        boolean check = myArrayList.contains("laptop");
+        assertTrue(check);
+    }
+
+    @Test
+void testThatArrayListThatDoesntContains_a_particularElement_returnsFalse(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
+        boolean check = myArrayList.contains("laptopsss");
+        assertFalse(check);
+    }
+
 
 
 
