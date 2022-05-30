@@ -19,9 +19,14 @@ public class MyArrayList {
         list  = new String[capacity];
     }
 
-    //    public boolean isEmpty() {
-//        return !isEmpty;
-//    }
+    public boolean isEmpty() {
+        if (getSize() == 0) return true;
+        return false;
+    }
+
+    public int getSize() {
+        return size;
+    }
 
     public void add(String element) {
         for (int i = 0; i < list.length; i++) {
@@ -68,9 +73,6 @@ public class MyArrayList {
                 }
                 size--;
             }
-
-
-
         }
     }
 

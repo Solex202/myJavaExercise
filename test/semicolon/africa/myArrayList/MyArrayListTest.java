@@ -18,11 +18,11 @@ class MyArrayListTest {
         myArrayList = new MyArrayList(5);
     }
 
-//    @Test
-//    void testThatArrayListIsEmpty(){
-//        assertTrue(myArrayList.isEmpty());
-//
-//    }
+    @Test
+    void testThatArrayListIsEmpty(){
+        assertTrue(myArrayList.isEmpty());
+
+    }
 
     @Test
     void testThatCanAddElementsInArrayList(){
@@ -115,6 +115,8 @@ void testThatArrayListThatDoesntContains_a_particularElement_returnsFalse(){
         myArrayList.add("laptop");
         myArrayList.add("cow");
         myArrayList.add("skirt");
+
+
 
         assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
 
