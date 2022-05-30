@@ -124,6 +124,46 @@ void testThatArrayListThatDoesntContains_a_particularElement_returnsFalse(){
         assertFalse(check);
     }
 
+    @Test
+    void testThatCanGetIndexOfAnElement(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
+        int index = myArrayList.indexOf("laptop");
+
+        assertEquals(index, 3);
+
+
+//        List<String> se = new ArrayList<>();
+//        se.indexOf()
+    }
+
+    @Test
+    void testThatWenIndexOfAnElementNotFoundReturnMinus1(){
+        myArrayList.add("weed");
+        myArrayList.add("shoe");
+        myArrayList.add("cloth");
+        myArrayList.add("laptop");
+        myArrayList.add("cow");
+        myArrayList.add("skirt");
+
+        assertArrayEquals(new String [] {"weed","shoe", "cloth", "laptop" , "cow", "skirt", null, null, null, null}, myArrayList.getList());
+
+        int index = myArrayList.indexOf("wheel");
+
+        assertEquals(index, -1);
+
+
+//        List<String> se = new ArrayList<>();
+//        se.indexOf()
+    }
+
 
 
 

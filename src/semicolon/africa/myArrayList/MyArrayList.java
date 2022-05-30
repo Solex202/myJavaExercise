@@ -84,4 +84,13 @@ public class MyArrayList {
         }
         return false;
     }
+
+    public int indexOf(String element) {
+        for (int i = 0; i < list.length; i++) {
+            if(element == list[i]) {
+                return i;
+            }
+        }
+         return -1;
+    }
 }
