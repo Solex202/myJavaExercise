@@ -87,7 +87,7 @@ public class MyArrayList {
 
     public int indexOf(String element) {
         for (int i = 0; i < list.length; i++) {
-            if(element == list[i]) {
+            if(Objects.equals(element, list[i])) {
                 return i;
             }
         }

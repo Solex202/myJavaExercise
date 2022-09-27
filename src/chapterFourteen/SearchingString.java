@@ -1,8 +1,17 @@
 package chapterFourteen;
 
+import java.time.LocalDateTime;
+
 public class SearchingString {
     public static void main(String[] args) {
-        searchingStrings("Men are men", "e");
+//        searchingStrings("Men are men", "e");
+
+        LocalDateTime today = LocalDateTime.now();
+        System.out.println(today.getDayOfWeek() + ", " + today.getMonth());
+        System.out.println(today);
+        LocalDateTime threeMonths = LocalDateTime.of(today.getYear(), today.getMonth().getValue()+3, today.getDayOfMonth(),today.getHour(), today.getMinute(), today.getSecond());
+        System.out.println(threeMonths.getDayOfWeek() + ", " + threeMonths.getMonth());
+        System.out.println(threeMonths);
     }
 
     private static void searchingStrings(String sentence, String _char) {
