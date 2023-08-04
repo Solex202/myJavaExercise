@@ -8,8 +8,6 @@ public class Wife {
 
     public void sing(){
         System.out.println("singing like a frog");
-
-
     }
 
 

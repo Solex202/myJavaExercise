@@ -20,7 +20,4 @@ public class Husband {
        System.out.println(message);
    }
 
-
-
-
 }

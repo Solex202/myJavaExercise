@@ -22,7 +22,7 @@ public class LongestCommonPrefix {
             char current = arr[0].charAt(i);
 
             for (String word: arr) {
-                if(current != word.charAt(i)){
+                if(word.charAt(i) != current){
                     return builder.toString();
                 }
             }
