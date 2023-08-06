@@ -7,6 +7,9 @@ public class SingleNumber {
 
     public static void main(String[] args) {
 
+        int [] arr = {2,1,1,2,4,5,4,6};
+        int result = singleNumber(arr);
+        System.out.println(result);
     }
 
     public static int singleNumber(int [] arr){
@@ -15,11 +18,11 @@ public class SingleNumber {
         }
 
         Set<Integer> set = new HashSet<>();
-        for (int i = 0; i < arr.length; i++){
-            if(set.contains(arr[i])){
-                set.remove(arr[i]);
-            }else {
-                set.add(arr[i]);
+        for (int j : arr) {
+            if (set.contains(j)) {
+                set.remove(j);
+            } else {
+                set.add(j);
             }
         }
 
