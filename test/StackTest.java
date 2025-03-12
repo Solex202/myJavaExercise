@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StackTest {
+class StackTest {
     MyStack stack;
     @BeforeEach
     public void setUp(){
         stack = new MyStack();
     }
     @Test
-    public void newStack_isEmpty() throws Exception{
+    void newStack_isEmpty() throws Exception{
         assertTrue(stack.isEmpty());
     }
 
