@@ -1,8 +1,6 @@
 package leetcode.arrays;
 
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class MaxCountOfPositiveAndNegativeNumber {
     public int maxCountOfPositiveAndNegative(int[] arr) {
         int maxCount = 0;
