@@ -13,4 +13,12 @@ class ReverseIntTest {
 
         Assertions.assertEquals(321, result);
     }
+
+    @Test
+    void testThatReverseIntCanBeCalculatedWhenNumberIsNegative(){
+        ReverseInt reverseInt = new ReverseInt();
+        int result = reverseInt.reverseInt(-123);
+
+        Assertions.assertEquals(321, result);
+    }
 }
