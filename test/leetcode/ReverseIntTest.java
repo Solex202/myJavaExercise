@@ -9,7 +9,7 @@ class ReverseIntTest {
     @Test
     void testThatReverseIntCanBeCalculated(){
         ReverseInt reverseInt = new ReverseInt();
-        int result = reverseInt.reverseInt(123);
+        int result = reverseInt.reverseInt2(123);
 
         Assertions.assertEquals(321, result);
     }
@@ -17,8 +17,8 @@ class ReverseIntTest {
     @Test
     void testThatReverseIntCanBeCalculatedWhenNumberIsNegative(){
         ReverseInt reverseInt = new ReverseInt();
-        int result = reverseInt.reverseInt(-123);
+        int result = reverseInt.reverseInt2(-123);
 
-        Assertions.assertEquals(321, result);
+        Assertions.assertEquals(-321, result);
     }
 }
