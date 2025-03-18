@@ -35,4 +35,18 @@ class LengthOfLastWordTest {
         int result = lengthOfLastWord.lengthOfLastWord(" Hello World ");
         assertEquals(5, result);
     }
+
+    @Test
+    void testLengthIsZeroWhenStringIsEmpty() {
+        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
+        int result = lengthOfLastWord.lengthOfLastWord("");
+        assertEquals(0, result);
+    }
+
+    @Test
+    void testLengthIsZeroWhenStringIsNull() {
+        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
+        int result = lengthOfLastWord.lengthOfLastWord2(null);
+        assertEquals(0, result);
+    }
 }
