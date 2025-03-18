@@ -2,12 +2,6 @@ package leetcode.arrays;
 
 public class LengthOfLastWordInAString {
 
-    public static void main(String[] args) {
-//        String word = "";
-//        int length = lengthOfLastWord2(word);
-//        System.out.println(length);
-    }
-
     public int lengthOfLastWord(String s){
         int right = s.length() -1 ;
         while (right >= 0 && s.charAt(right) == ' '){
