@@ -18,7 +18,7 @@ public class ReverseInt {
     }
 
     public int reverseInt2(int number){
-        int remainder = 0;
+        int remainder ;
         int reversed = 0;
         while(number != 0){
             remainder = number % 10;
