@@ -28,11 +28,7 @@ public class LengthOfLastWordInAString {
         }
         String [] splitWord= word.split("\\s+");
 
-//        if(splitWord.length == 0){
-//            return 0;
-//        }
-        String lastWord = splitWord[splitWord.length - 1];
+        return splitWord[splitWord.length - 1].length();
 
-        return lastWord.length();
     }
 }
