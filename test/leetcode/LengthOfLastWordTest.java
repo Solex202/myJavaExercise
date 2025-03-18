@@ -15,4 +15,10 @@ class LengthOfLastWordTest {
     }
 
 
+    @Test
+    void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpaces() {
+        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
+        int result = lengthOfLastWord.lengthOfLastWord("Hello World ");
+        assertEquals(5, result);
+    }
 }
