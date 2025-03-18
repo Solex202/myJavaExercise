@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.Assert.assertEquals;
-
 class LengthOfLastWordTest {
 
     @ParameterizedTest
@@ -18,7 +16,7 @@ class LengthOfLastWordTest {
             " Hello World , 5",})
     void testLengthOfLastIsReturnedSuccessfully(String input, int expected) {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord(input);
+        int result = lengthOfLastWord.lengthOfLastWord2(input);
         Assertions.assertEquals(expected, result);
     }
 
