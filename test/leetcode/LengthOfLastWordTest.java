@@ -2,38 +2,23 @@ package leetcode;
 
 import leetcode.arrays.LengthOfLastWordInAString;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.Assert.assertEquals;
 
 class LengthOfLastWordTest {
 
-    @Test
-     void testLengthOfLastIsReturnedSuccessfully() {
+    @ParameterizedTest
+    @CsvSource({
+            "Hello World, 5",
+            "Hello World , 5",
+            " Hello World, 5",
+            " Hello World , 5",})
+    void testLengthOfLastIsReturnedSuccessfully1(String input, int expected) {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord2("Hello World");
-        assertEquals(5, result);
-    }
-
-
-    @Test
-    void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpaces() {
-        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord2("Hello World ");
-        assertEquals(5, result);
-    }
-
-    @Test
-    void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpacesAtTheBeginning() {
-        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord2(" Hello World");
-        assertEquals(5, result);
-    }
-
-    @Test
-    void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpacesAtTheBeginningAndEnd() {
-        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord2(" Hello World ");
-        assertEquals(5, result);
+        int result = lengthOfLastWord.lengthOfLastWord(input);
+        assertEquals(expected, result);
     }
 
     @Test
