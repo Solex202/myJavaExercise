@@ -10,7 +10,7 @@ class LengthOfLastWordTest {
     @Test
      void testLengthOfLastIsReturnedSuccessfully() {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord("Hello World");
+        int result = lengthOfLastWord.lengthOfLastWord2("Hello World");
         assertEquals(5, result);
     }
 
@@ -18,28 +18,28 @@ class LengthOfLastWordTest {
     @Test
     void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpaces() {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord("Hello World ");
+        int result = lengthOfLastWord.lengthOfLastWord2("Hello World ");
         assertEquals(5, result);
     }
 
     @Test
     void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpacesAtTheBeginning() {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord(" Hello World");
+        int result = lengthOfLastWord.lengthOfLastWord2(" Hello World");
         assertEquals(5, result);
     }
 
     @Test
     void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpacesAtTheBeginningAndEnd() {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord(" Hello World ");
+        int result = lengthOfLastWord.lengthOfLastWord2(" Hello World ");
         assertEquals(5, result);
     }
 
     @Test
     void testLengthIsZeroWhenStringIsEmpty() {
         LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
-        int result = lengthOfLastWord.lengthOfLastWord("");
+        int result = lengthOfLastWord.lengthOfLastWord2("");
         assertEquals(0, result);
     }
 
