@@ -23,11 +23,14 @@ public class LengthOfLastWordInAString {
     }
 
     public int lengthOfLastWord2(String word){
-        String [] splitWord= word.split("\\s+");
-
-        if(splitWord.length == 0){
+        if (word == null || word.isEmpty()){
             return 0;
         }
+        String [] splitWord= word.split("\\s+");
+
+//        if(splitWord.length == 0){
+//            return 0;
+//        }
         String lastWord = splitWord[splitWord.length - 1];
 
         return lastWord.length();
