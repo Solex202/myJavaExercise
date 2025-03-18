@@ -3,12 +3,12 @@ package leetcode.arrays;
 public class LengthOfLastWordInAString {
 
     public static void main(String[] args) {
-        String word = "my name is deola";
-        int length = lengthOfLastWord(word);
-        System.out.println(length);
+//        String word = "";
+//        int length = lengthOfLastWord2(word);
+//        System.out.println(length);
     }
 
-    public static int lengthOfLastWord(String s){
+    public int lengthOfLastWord(String s){
         int right = s.length() -1 ;
         while (right >= 0 && s.charAt(right) == ' '){
             right --;
@@ -20,5 +20,16 @@ public class LengthOfLastWordInAString {
         }
 
         return right - left;
+    }
+
+    public int lengthOfLastWord2(String word){
+        String [] splitWord= word.split("\\s+");
+
+        if(splitWord.length == 0){
+            return 0;
+        }
+        String lastWord = splitWord[splitWord.length - 1];
+
+        return lastWord.length();
     }
 }
