@@ -21,4 +21,18 @@ class LengthOfLastWordTest {
         int result = lengthOfLastWord.lengthOfLastWord("Hello World ");
         assertEquals(5, result);
     }
+
+    @Test
+    void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpacesAtTheBeginning() {
+        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
+        int result = lengthOfLastWord.lengthOfLastWord(" Hello World");
+        assertEquals(5, result);
+    }
+
+    @Test
+    void testLengthOfLastIsReturnedSuccessfullyWhenStringHasExtraSpacesAtTheBeginningAndEnd() {
+        LengthOfLastWordInAString lengthOfLastWord = new LengthOfLastWordInAString();
+        int result = lengthOfLastWord.lengthOfLastWord(" Hello World ");
+        assertEquals(5, result);
+    }
 }
